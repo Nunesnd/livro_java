@@ -1,10 +1,12 @@
 \documentclass{article}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
 \usepackage{fontspec}
 \setmainfont{Bahnschrift}
 \usepackage{geometry}
-\usepackage{fancyhdr}
-\usepackage{ragged2e}
+\usepackage{graphicx}
 \usepackage{microtype}
+\usepackage{ragged2e}
 \usepackage{tabularx}
 
 \geometry{
@@ -18,9 +20,22 @@
 \fancyhead[RO]{\rightmark}
 \fancyfoot[C]{\thepage}
 
+\newcommand{\logoJava}{\includegraphics[height=0.5cm]{imagens/logo_java_sem_nome.png}}
+\newlist{listaLogoJava}{itemize}{1}
+\setlist[listaLogoJava]{label=\logoJava, left=0pt, itemsep=-1em}
+
+
 \begin{document}
 
 %Capa
+\begin{figure}
+    \centering
+    \includegraphics[height=5cm]{imagens/logo_java_com_nome.png}
+    \label{fig:imagem}
+\end{figure}
+
+\newpage
+
 \title{Java}
 \author{Diego Nunes}
 \maketitle
@@ -82,15 +97,22 @@ Além dessas áreas a linguagem também está presente em tecnologias de criptog
 
 \subsection{Versões disponíveis}
 \justify
+
+\begin{listaLogoJava}
+    \item Java SE (Standard Edition): Destinada ao desenvolvimento de aplicações desktop e pequenos sistemas corporativos. Inclui as bibliotecas básicas da linguagem e a JVM (Java Virtual Machine).
+    \item Java EE (Enterprise Edition): Anteriormente conhecida como J2EE, é voltada para o desenvolvimento de aplicações corporativas de grande porte, com suporte a recursos como transações distribuídas, mensageria e segurança.
+    \item Java ME (Micro Edition): Projetada para dispositivos com recursos limitados, como celulares, PDAs e outros dispositivos embarcados.
+    \item Java FX: Uma plataforma para a criação de aplicações ricas para desktop, web e dispositivos móveis.
+    \item JRE (Java Runtime Environment) é o componente fundamental do ambiente Java necessário para executar aplicações compiladas, pois contém a JVM (Java Virtual Machine) e outras bibliotecas necessárias para a execução do código. Podemos fazer o download em https://www.java.com.
+\end{listaLogoJava}
+
 Com o passar do tempo o Java passou por várias versões e edições, as principais são:
-Java SE (Standard Edition): Destinada ao desenvolvimento de aplicações desktop e pequenos sistemas corporativos. Inclui as bibliotecas básicas da linguagem e a JVM (Java Virtual Machine).
-Java EE (Enterprise Edition): Anteriormente conhecida como J2EE, é voltada para o desenvolvimento de aplicações corporativas de grande porte, com suporte a recursos como transações distribuídas, mensageria e segurança.
-Java ME (Micro Edition): Projetada para dispositivos com recursos limitados, como celulares, PDAs e outros dispositivos embarcados.
-Java FX: Uma plataforma para a criação de aplicações ricas para desktop, web e dispositivos móveis.
-Há quem confunda o JRE (Java Runtime Environment) com uma versão do Java, mas sim um componente fundamental do ambiente Java necessário para executar aplicações compiladas, pois contém a JVM (Java Virtual Machine) e outras bibliotecas necessárias para a execução do códig. Podemos fazer o download em https://www.java.com.
-JVM – A máquina virtual Java
-Uma característica muito forte do Java é a presença da JVM, que permite a execução de código Java em qualquer sistema. Na atualidade isso é uma característica muito comum, mas que só foi popularizada com o Java. O desenvolvimento de um software começa por escrever uma série de códigos, eles passam por um software chamado compilador, que transformará aqueles comandos em arquivos binários que podem ser interpretados pelo sistema operacional.
-No passado quando um software era desenvolvido em uma linguagem como o C ou C++ e voltado para um sistema operacional ele não funcionaria em outro por estes serem absolutamente diferentes em inúmeros aspectos. Para haver este mesmo software muitos ajustes eram necessários, dependendo do projeto era como quase refazer tudo.
+
+\subsection{JVM – A máquina virtual Java}
+\justify
+
+Uma característica muito forte do Java é a presença da JVM, que permite a execução de código Java em qualquer sistema. Na atualidade isso é uma característica muito comum, mas que só foi popularizada com o Java. O desenvolvimento de um software começa por escrever uma série de códigos, eles passam por um software chamado compilador, que transformará aqueles comandos em arquivos binários que podem ser interpretados pelo sistema operacional. \newline
+No passado quando um software era desenvolvido em uma linguagem como o C ou C++ e voltado para um sistema operacional ele não funcionaria em outro por estes serem absolutamente diferentes em inúmeros aspectos. Para haver este mesmo software muitos ajustes eram necessários, dependendo do projeto era como quase refazer tudo. \newline
 
 \newpage
 \section{Capítulo 2}
