@@ -1,0 +1,118 @@
+\documentclass{article}
+\usepackage{fontspec}
+\setmainfont{Bahnschrift}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{ragged2e}
+\usepackage{microtype}
+\usepackage{tabularx}
+
+\geometry{
+	left=1.5cm,
+	right=1.5cm,
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE]{\leftmark}
+\fancyhead[RO]{\rightmark}
+\fancyfoot[C]{\thepage}
+
+\begin{document}
+
+%Capa
+\title{Java}
+\author{Diego Nunes}
+\maketitle
+\thispagestyle{empty}
+
+\newpage
+
+% Sumário
+\thispagestyle{empty} % Remove numeração da página
+\tableofcontents
+
+% Início da numeração
+\setcounter{page}{1}
+
+\newpage
+\section{Capítulo 1 - Princípios}
+\markboth{Java}{Princípios básicos}
+
+Assim como inúmeras invenções, o Java surgiu para atender uma necessidade, que provou estar além de seu tempo, até a chegada da web para aproveitamento máximo de suas capacidades que estão em evolução até hoje. 
+
+\subsection{A história do Java}
+\justify
+A linguagem de programação Java foi criada por uma equipe de desenvolvedores liderada por James Gosling na década de 1990, na empresa Sun Microsystems, com o objetivo de desenvolver uma solução para conectar e controlar dispositivos eletrônicos domésticos, como televisão, vídeo cassete entre outros. A equipe conhecida como Gren Team iniciou o projeto usando a linguagem C++, a mais moderna e sofisticada de seu tempo, mas com o andamento do projeto muitas necessidades foram aparecendo e nenhuma linguagem atendida esses requisitos. Como resultado, o Green Team acabou criando sua própria linguagem de programação batizada inicialmente de Green Talk, onde precisou mudar de nome sendo rebatizado de Oak (carvalho, pois havia uma grande árvore de carvalho que vista da janela de James Gosling). \newline
+O resultado do projeto surge em 1992 o *7 (Star Seven), um dispositivo que controlaria todos os recursos de uma residência através de uma tela sensível ao toque, com um assistente para ensinar o usuário o funcionamento do aparelho, chamado Duke, hoje mascote da linguagem Java. Veja vídeo de apresentação https://www.youtube.com/watch?v=1CsTH9S79qI. Assistindo ao vídeo do link nota-se que tudo que foi mostrado nos é rotineiro hoje, mas não esqueça, o ano era 1992, então tenhamos em mente eu esta era uma revolução tecnológica para sua época, que infelizmente nenhuma empresa se interessou pelo produto engavetando o projeto. \newline
+Em 1994, Tim Berners-Lee (criador do HTML, World Wide Web e muitas outras envolvidas), buscava uma forma de criar interatividade para a Web. Tendo o *7 uma solução com interatividade, a linguagem Oak permitindo a criação de recursos interativos, buscaram então levar essa tecnologia para a web através do projeto Web Runner que seria o primeiro navegador web. \newline
+No momento que foram registrar o nome da linguagem foi descoberto que já existia uma tecnologia com o nome Oak. A equipe reuniu-se em uma cafeteria e para decidir rapidamente um novo nome para a linguagem. É comum a história que o nome se deu enquanto tomavam café e foi perguntado qual a origem do café mais forte conhecido e a resposta foi a ilha de Java, nomeando assim a linguagem e também inspirando a criação da logo, uma xícara de café. \newline
+Renomeando não apenas a linguagem, mas todo o projeto, Web Runner passou a chamar-se HotJava. A mídia começou a divulgar com muita força o surgimento e as possibilidades da tecnologia. O sucesso foi tanto, a ponto da empresa Netscape renomear a linguagem do seu projeto de LiveScritp com forma de aproveitar o marketing e rebatizou sua linguagem como JavaScript. Cabe ressaltar, não nenhuma conexão entre os projetos. \newline
+A linguagem Java foi oficialmente lançada em 1995 como parte da plataforma Java, que incluía também a máquina virtual Java (JVM) e uma série de bibliotecas de classes. A principal característica do Java era a portabilidade, garantida pela JVM, que permitia que o mesmo código fonte fosse executado em diferentes sistemas operacionais. \newline
+Outro aspecto importante do Java foi a sua arquitetura orientada a objetos. A linguagem foi projetada desde o início para suportar conceitos de orientação a objetos, como encapsulamento, herança e polimorfismo. Isso a tornou uma linguagem robusta e flexível, adequada para o desenvolvimento de software complexo. \newline
+Desde o seu lançamento, o Java se tornou uma das linguagens de programação mais populares do mundo, sendo amplamente utilizada em uma variedade de aplicações, desde aplicações de desktop até sistemas embarcados e aplicações web. \newline
+Uma das razões para a popularidade do Java foi a sua adoção pela empresa Netscape, que na época estava desenvolvendo o navegador Netscape Navigator. A Netscape decidiu incorporar a tecnologia Java em seu navegador, o que levou a um aumento significativo na popularidade da linguagem. \newline
+Outro fator importante para o sucesso do Java foi a sua adoção pela empresa Microsoft, que desenvolveu uma versão do Java para a plataforma Windows. Isso permitiu que os desenvolvedores criassem aplicativos Java para o Windows, o que ajudou a popularizar ainda mais a linguagem. \newline
+Ao longo dos anos, o Java passou por várias atualizações e melhorias, incluindo a adição de novas funcionalidades e bibliotecas. Em 2006 a linguagem tornou-se opensource sob licença GPL3. Em 2009, a Sun Microsystems foi adquirida pela Oracle Corporation, que continuou o desenvolvimento do Java. \newline
+Hoje, o Java é amplamente utilizado em uma variedade de aplicações, desde aplicações de desktop até sistemas distribuídos e aplicações web. A linguagem continua sendo uma das mais populares entre os desenvolvedores, devido à sua portabilidade, desempenho e robustez.
+
+\subsection{Onde o Java está presente?}
+\justify
+O Java é uma linguagem de programação versátil e amplamente utilizada em uma variedade de aplicações e tecnologias presente no dia a dia. \newline
+
+\begin{table}[ht]
+    \centering
+    \begin{tabularx}{\textwidth}{p{3cm}X}
+        \hline
+        \textbf{Área} & \textbf{Descrição} \\
+        \hline
+        	Desenvolvimento de Aplicações Web & Frameworks como Spring e JSF são comumente usados para criar aplicativos web robustos e escaláveis. \\ \\
+        	Desenvolvimento de Aplicativos Mobile & O Android, um dos sistemas operacionais móveis mais populares, é baseado em Java. Desenvolvedores de aplicativos Android usam o Java para criar aplicativos para dispositivos móveis. \\ \\
+        	Desenvolvimento de Aplicações Empresariais & Java é muito utilizado em ambientes corporativos para desenvolver sistemas de grande escala, como ERPs e CRMs. \\ \\
+	Big Data & Tecnologias como Apache Hadoop e Apache Spark são escritas em Java, tornando-o fundamental para processamento de grandes volumes de dados. \\ \\
+	Internet das Coisas (IoT) & Java é utilizado em dispositivos IoT devido à sua portabilidade e escalabilidade. \\ \\
+	Jogos & A plataforma Java é amplamente utilizada no desenvolvimento de jogos, especialmente em jogos para dispositivos móveis e jogos online, maior exemplo é o Minecraft. \\ \\
+	Servidores de Aplicação & Java é comumente usado em servidores de aplicação, como Apache Tomcat e JBoss, para hospedar e executar aplicativos web. \\ \\
+	Desktop & Embora não seja tão comum quanto em outras áreas, o Java ainda é utilizado no desenvolvimento de aplicativos desktop como o LibreOffice e Sweet Home 3D. \\	 \\
+        \hline
+    \end{tabularx}
+\end{table}
+
+Além dessas áreas a linguagem também está presente em tecnologias de criptografia bancária, sondas espaciais, softwares embarcados de veículos e muitas outras áreas.
+
+\subsection{Versões disponíveis}
+\justify
+Com o passar do tempo o Java passou por várias versões e edições, as principais são:
+Java SE (Standard Edition): Destinada ao desenvolvimento de aplicações desktop e pequenos sistemas corporativos. Inclui as bibliotecas básicas da linguagem e a JVM (Java Virtual Machine).
+Java EE (Enterprise Edition): Anteriormente conhecida como J2EE, é voltada para o desenvolvimento de aplicações corporativas de grande porte, com suporte a recursos como transações distribuídas, mensageria e segurança.
+Java ME (Micro Edition): Projetada para dispositivos com recursos limitados, como celulares, PDAs e outros dispositivos embarcados.
+Java FX: Uma plataforma para a criação de aplicações ricas para desktop, web e dispositivos móveis.
+Há quem confunda o JRE (Java Runtime Environment) com uma versão do Java, mas sim um componente fundamental do ambiente Java necessário para executar aplicações compiladas, pois contém a JVM (Java Virtual Machine) e outras bibliotecas necessárias para a execução do códig. Podemos fazer o download em https://www.java.com.
+JVM – A máquina virtual Java
+Uma característica muito forte do Java é a presença da JVM, que permite a execução de código Java em qualquer sistema. Na atualidade isso é uma característica muito comum, mas que só foi popularizada com o Java. O desenvolvimento de um software começa por escrever uma série de códigos, eles passam por um software chamado compilador, que transformará aqueles comandos em arquivos binários que podem ser interpretados pelo sistema operacional.
+No passado quando um software era desenvolvido em uma linguagem como o C ou C++ e voltado para um sistema operacional ele não funcionaria em outro por estes serem absolutamente diferentes em inúmeros aspectos. Para haver este mesmo software muitos ajustes eram necessários, dependendo do projeto era como quase refazer tudo.
+
+\newpage
+\section{Capítulo 2}
+\markboth{Java}{Princípios básicos}
+Texto do capítulo 2...
+
+What is Lorem Ipsum?
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+\subsection{Why do we use it?}
+Why do we use it?
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+Where does it come from?
+Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+
+Where can I get some?
+There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+
+Texto do capítulo 1...
+
+
+\end{document}
